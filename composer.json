@@ -1,0 +1,33 @@
+{
+  "name": "tiger/core",
+  "description": "The Core Class for the Tiger Framework",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Rudy Mas",
+      "email": "rudy.mas@rmsoft.be",
+      "homepage": "https://www.rmsoft.be/",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">= 8.1",
+    "tiger/controller": "^1",
+    "tiger/email": "^2",
+    "tiger/httprequest": "^7",
+    "tiger/login": "^4",
+    "tiger/menu": "^2",
+    "tiger/model": "^1",
+    "tiger/repository": "^2",
+    "tiger/router": "^1",
+    "rudymas/manipulator": "^1",
+    "rudymas/pdo-ext": "^5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tiger\\": "src/"
+    }
+  }
+}
