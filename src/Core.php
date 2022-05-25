@@ -189,7 +189,7 @@ class Core
     private function loadingTigerEmail(): void
     {
         $this->Email = new Email();
-        $this->Email->tiger_config();
+        $this->Email->config();
     }
 
     /**
