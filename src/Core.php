@@ -125,6 +125,7 @@ class Core
 
     /**
      * Loading the databases for the websites
+     * @throws Exception
      */
     private function loadingDatabases(): void
     {
@@ -153,8 +154,13 @@ class Core
         foreach ($database as $connect) {
             $object = $connect['objectName'];
             $this->DB[$object] = new DBconnect(
-                $connect['dbHost'], $connect['port'], $connect['dbUsername'],
-                $connect['dbPassword'], $connect['dbName'], $connect['dbCharset'], $connect['dbType']
+                $connect['dbHost'],
+                $connect['port'],
+                $connect['dbUsername'],
+                $connect['dbPassword'],
+                $connect['dbName'],
+                $connect['dbCharset'],
+                $connect['dbType']
             );
         }
     }

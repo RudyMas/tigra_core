@@ -25,6 +25,9 @@
     "rudymas/manipulator": "^1",
     "rudymas/pdo-ext": "^5"
   },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6.2"
+  },
   "autoload": {
     "psr-4": {
       "Tiger\\": "src/"
