@@ -1,6 +1,6 @@
 {
-  "name": "tiger/core",
-  "description": "The Core Class for the Tiger Framework",
+  "name": "tigra/core",
+  "description": "The Core Class for the Tigra Framework",
   "type": "library",
   "license": "GPL-3.0-or-later",
   "authors": [
@@ -14,14 +14,14 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">= 7.4",
-    "tiger/controller": "^7.4",
-    "tiger/email": "^7.4",
-    "tiger/httprequest": "^7.4",
-    "tiger/login": "^7.4",
-    "tiger/menu": "^7.4",
-    "tiger/model": "^7.4",
-    "tiger/repository": "^7.4",
-    "tiger/router": "^7.4",
+    "tigra/controller": "^7.4",
+    "tigra/email": "^7.4",
+    "tigra/httprequest": "^7.4",
+    "tigra/login": "^7.4",
+    "tigra/menu": "^7.4",
+    "tigra/model": "^7.4",
+    "tigra/repository": "^7.4",
+    "tigra/router": "^7.4",
     "rudymas/manipulator": "^1",
     "rudymas/pdo-ext": "^5"
   },
@@ -30,7 +30,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Tiger\\": "src/"
+      "Tigra\\": "src/"
     }
   }
 }

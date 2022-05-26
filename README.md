@@ -1,19 +1,20 @@
-# RudyMas/tiger_core
-Tiger's Core class
+# Class Core for the Tigra Framework
 
-This is the heart of the Tiger Framework!
+Tigra's Core class
 
-The repository 'RudyMas/tiger' contains the structure and some pre-configured files of the Framework. tiger_core provides the logic behind it.
+This is the heart of the Tigra Framework!
 
-It's made for my framework, so it will be difficult to add this one to your own projects. But if you want to try it, you can install the package through composer.
+The repository 'RudyMas/tigra' contains the structure and some pre-configured files of the Framework. tigra_core provides the logic behind it.
+
+The Core is made for my Tigra Framework, so it will be difficult to add this one to your own projects. But if you want to try it, you can install the package through composer.
 ````
-composer require tiger/core
+composer require tigra/core
 ````
 
 or by editing composer.json yourself and adding:
 ````
 "require": {
-    "tiger/core": "*"
+    "tigra/core": "*"
 }
 ````
 

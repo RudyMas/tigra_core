@@ -1,6 +1,6 @@
 <?php
 
-namespace Tiger;
+namespace Tigra;
 
 use Exception;
 use RudyMas\Manipulator\Text;
@@ -13,7 +13,7 @@ use RudyMas\DBconnect;
  * @copyright 2022, rmsoft.be. (http://www.rmsoft.be/)
  * @license https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
  * @version 7.4.1.0
- * @package Tiger
+ * @package Tigra
  */
 class Core
 {
@@ -25,6 +25,7 @@ class Core
 
     /**
      * Core constructor.
+     * @throws Exception
      */
     public function __construct()
     {
@@ -42,16 +43,16 @@ class Core
             $this->loadingDatabases();
         }
         if (USE_LOGIN && isset($this->DB['DBconnect'])) {
-            $this->loadingTigerLogin($this->DB['DBconnect']);
+            $this->loadingTigraLogin($this->DB['DBconnect']);
         }
         if (USE_HTTP_REQUEST) {
-            $this->loadingTigerHttpRequest();
+            $this->loadingTigraHttpRequest();
         }
         if (USE_EMAIL) {
-            $this->loadingTigerEmail();
+            $this->loadingTigraEmail();
         }
         if (USE_MENU) {
-            $this->loadingTigerMenu();
+            $this->loadingTigraMenu();
         }
 
         $Router = new Router($this);
@@ -60,8 +61,8 @@ class Core
             $Router->execute();
         } catch (Exception $exception) {
             http_response_code(500);
-            print('Tiger : Something went wrong.');
-            if (TIGER_DEBUG === true) {
+            print('Tigra : Something went wrong.');
+            if (TIGRA_DEBUG === true) {
                 print('<br><br>');
                 print($exception->getMessage());
                 print('<br><br>');
@@ -166,36 +167,36 @@ class Core
     }
 
     /**
-     * Loading the Tiger Login class
+     * Loading the Tigra Login class
      *
      * @param DBconnect $DBconnect
      */
-    private function loadingTigerLogin(DBconnect $DBconnect): void
+    private function loadingTigraLogin(DBconnect $DBconnect): void
     {
         $this->Login = new Login($DBconnect, new Text(), USE_EMAIL_LOGIN);
     }
 
     /**
-     * Loading the Tiger HttpRequest class
+     * Loading the Tigra HttpRequest class
      */
-    private function loadingTigerHttpRequest(): void
+    private function loadingTigraHttpRequest(): void
     {
         $this->HttpRequest = new HttpRequest();
     }
 
     /**
-     * Loading the Tiger Email class
+     * Loading the Tigra Email class
      */
-    private function loadingTigerEmail(): void
+    private function loadingTigraEmail(): void
     {
         $this->Email = new Email();
         $this->Email->config();
     }
 
     /**
-     * Loading the Tiger Menu class
+     * Loading the Tigra Menu class
      */
-    private function loadingTigerMenu(): void
+    private function loadingTigraMenu(): void
     {
         $this->Menu = new Menu();
     }
